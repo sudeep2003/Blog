@@ -1,0 +1,12 @@
+<%- include("./partial/header") %>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% for(let i in posts){ %>
+
+<h1><%= posts[i].Title %></h1>
+<p>
+  <%= posts[i].Content.substring(0,100)+"..."%>
+  <a href="/posts/<%= posts[i].Title %>">Read More</a>
+</p>
+<% } %> <%- include("./partial/footer") %>
